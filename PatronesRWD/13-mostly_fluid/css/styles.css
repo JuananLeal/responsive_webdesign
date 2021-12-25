@@ -14,6 +14,7 @@ body {
     font-size: 1.6rem;
     line-height: 2;
 }
+
 h1 {
     font-size: 4rem;
 }
@@ -37,3 +38,29 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+/* Mostlyfluid pretende que utilicemos en vez de por ejemplo max-width:1200px (esto haría que si la pantala es pequeña
+la imagen se salga porque mantiene el tamaño fijo) utilizando % o valores rem conseguimos que aunque cambie el dispositivo
+todo fluya*/
+
+.contenedor{
+    max-width: 120rem;
+    width: 95%;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .contenedor{
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .contenedor{
+        width: 60%;
+    }
+}
