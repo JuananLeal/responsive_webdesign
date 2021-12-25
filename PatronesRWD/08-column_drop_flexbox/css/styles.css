@@ -48,3 +48,25 @@ p {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 480px) {
+    .column-drop-flex{
+        display: flex;
+        justify-content: space-between;
+        /* Si lo mirase sin el wrap vería como los coloca de izquierda a derecha por lo que priemro les da el 50% y luego coloca 
+        el tercer párrafo, eso porque por defecto viene con no-wrap */
+        flex-wrap: wrap;
+    }
+
+    .contenido-principal, .primera{
+        /* Le digo que el contenido principal y la barra primera tomen el 50% de la pantalla menos 1 rem como si fuese gap */
+        flex-basis: calc(50% - 1rem);
+    }
+
+}
+
+@media (min-width: 768px) {
+    .contenido-principal, .primera, .segunda{
+        flex: 0 0 calc(33.3%);
+    }
+}

@@ -49,3 +49,23 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .contenedor-grid{
+        display:grid;
+        /* Defino 3 áreas en mi página*/
+        grid-template-areas: "izquierda contenido derecha";
+        grid-template-columns: 1fr 3fr 1fr;
+        column-gap: 2rem;
+        grid-auto-flow: column;
+    }
+
+    .contenido-principal{
+        /* Utilizando las áreas definidas puedo colocar mi contenido*/
+        grid-area: contenido;
+    }
+
+    .sidebar-1{
+        grid-column: 1 / 2;
+    }
+}

@@ -39,3 +39,11 @@ h1 {
 }
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .dos-columnas{
+        display: flex;
+        gap: 2rem;
+        /* gap is not 100% supported, you can use this syntax --> flex: 0 0 calc( 50% - 1rem ); */
+    }
+}

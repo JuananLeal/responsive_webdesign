@@ -49,3 +49,41 @@ p {
 
 
 /** CODIGO AQUI **/
+
+@media (min-width: 768px) {
+    .layout-shifter{
+        display: grid;
+        /* Si pongo las zonas entre comillas las situno arriba y abajo, si las escribo "contenido inferior" tendría una zona contenido
+        a la izquierda y a su derecha una zona llamada inferior */
+        grid-template-areas: "contenido" "inferior";
+    }
+
+    .sidebar{
+        grid-area: inferior;
+    }
+    
+    .contenido-principal{
+        grid-area: contenido;
+        display: grid;
+        grid-template-areas: "entrada1 entrada2";
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .layout-shifter{
+        grid-template-areas: "contenido sidebar";
+        column-gap: 2rem;
+    }
+
+    .sidebar{
+        grid-area: sidebar;
+    }
+
+    .contenido-principal{
+        grid-area: contenido;
+        grid-template-areas: "entrada1" "entrada2";
+        grid-template-columns: unset;
+    }
+}
